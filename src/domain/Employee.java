@@ -1,6 +1,12 @@
 package domain;
+/**
+ * Представляє співробітника
+ */
 public class Employee {
-
+    /**
+     * Повертає рядок, що представляє об'єкт у вигляді рядка
+     * @return рядок у вигляді рядка
+     */
     @Override
     public String toString() {
         return "\nEmployee ID= " + ID + "\nName= " + name + "\nJobTitle= " + jobTitle + "\nLevel= " + level + "\nDept= " + dept;
@@ -13,7 +19,12 @@ public class Employee {
     private String dept;
 
    // private static int employeesCount = 0;
-
+    /**
+     * @param name ім'я співробітника
+     * @param jobTitle посада співробітника
+     * @param level рівень співробітника
+     * @param dept відділ співробітника
+     */
     public Employee(String name, String jobTitle, int level, String dept) {
         this();
         setName(name);
@@ -29,7 +40,11 @@ public class Employee {
         }
         this.dept = dept;
     }
-
+    /**
+     * Створює нового співробітника з випадковим ідентифікаційним номером
+     * Ідентифікаційний номер генерується випадковим чином у діапазоні від 0 до 999
+     * @throws NumberFormatException якщо ідентифікаційний номер більший за 10000
+     */
     public Employee() {
         ID = (int)(Math.random()*1000);
 //        if (ID > 10000) {
@@ -37,18 +52,30 @@ public class Employee {
 //        }
     }
 
+    /**
+     * @param job посада співробітника
+     */
     public void setJobTitle(String job) {
         jobTitle = job;
     }
 
+    /**
+     * @return посада співробітника
+     */
     public String getJobTitle() {
         return jobTitle;
     }
 
+    /**
+     * @return ім'я співробітника
+     */
     public String getName() {
         return name;
     }
 
+    /**
+     * @param level рівень співробітника
+     */
     public void setLevel(int level) {
         switch (level) {
             case 1:
@@ -61,18 +88,30 @@ public class Employee {
         }
     }
 
+    /**
+     * @return рівень співробітника
+     */
     public int getLevel() {
         return level;
     }
 
+    /**
+     * @return відділ співробітника
+     */
     public String getDept() {
         return dept;
     }
 
+    /**
+     * @param dept відділ співробітника
+     */
     public void setDept(String dept) {
         this.dept = dept;
     }
 
+    /**
+     * @param name ім'я співробітника
+     */
     public void setName(String name) {
 //        boolean correctName = true;
 //        for (int i = 0; i < name.length(); i++) {
