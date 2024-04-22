@@ -3,6 +3,7 @@ package domain;
  * Представляє художника, який є співробітником
  */
 public class Artist extends Employee {
+
     /**
      * @param skiils навички художника
      * @param name ім'я художника

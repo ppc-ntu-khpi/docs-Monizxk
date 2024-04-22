@@ -1,9 +1,11 @@
 package domain;
+
 /**
  * Представляє редактора, який є художником
  * Цей клас є підкласом класу Artist
  */
 public class Editor extends Artist {
+
     /**
      * @param electronicEditing тип редагування (true - електронне, false - паперове)
      * @param skiils масив навичок редактора

@@ -1,9 +1,11 @@
 package domain;
+
 /**
  * Представляє менеджера, який є співробітником
  * Цей клас є підкласом класу Employee
  */
 public class Manager extends Employee {
+
     /**
      * @param employees масив співробітників, керованих менеджером
      * @param name ім'я менеджера
@@ -15,6 +17,7 @@ public class Manager extends Employee {
         super(name, jobTitle, level, dept);
         this.employees = employees;
     }
+
     /**
      * @return рядок у вигляді рядка
      */
